@@ -47,7 +47,9 @@ namespace ClassTypeCastApp
             }
 
             강아지 뽀삐 = null;
-            if (뽀삐 is 포유류) //false
+            //강아지 뽀삐 = new 강아지();
+            //뽀삐 = null;
+            if (뽀삐 is 강아지) //false : 뽀삐가 null 이기때문
             {
                 Console.WriteLine("실행");
                 뽀삐 = new 포유류() as 강아지;
