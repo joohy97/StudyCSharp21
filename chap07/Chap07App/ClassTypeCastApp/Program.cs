@@ -46,7 +46,8 @@ namespace ClassTypeCastApp
                 쭈쭈.멍멍();
             }
 
-            강아지 뽀삐 = null;
+            //강아지 뽀삐 = null;
+            강아지 뽀삐 = new 강아지();
             if (뽀삐 is 포유류) //false
             {
                 Console.WriteLine("실행");
