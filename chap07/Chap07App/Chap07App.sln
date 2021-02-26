@@ -17,9 +17,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritTestApp", "InheritTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassTypeCastApp", "ClassTypeCastApp\ClassTypeCastApp.csproj", "{4D953460-A754-4975-8E4F-815F16E29153}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideTestApp", "Override\OverrideTestApp.csproj", "{C7D09C15-7398-48F5-9FA3-DC349A86BA80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OverrideTestApp", "Override\OverrideTestApp.csproj", "{C7D09C15-7398-48F5-9FA3-DC349A86BA80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialClassApp", "PartialClassApp\PartialClassApp.csproj", "{7AEEC322-942C-4373-9999-9676E480590B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewInheritTestApp", "NewInheritTestApp\NewInheritTestApp.csproj", "{5387C08B-76A0-40CE-A990-B6395D80FDC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewTypeCastApp", "NewTypeCastApp\NewTypeCastApp.csproj", "{9B72153C-BCFE-4F75-A25F-C1EB707A18D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewOverrideTestApp", "NewOverrideTestApp\NewOverrideTestApp.csproj", "{E5C7D164-4031-4DAC-9727-20C478D45E14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TupleTestApp", "TupleTestApp\TupleTestApp.csproj", "{B77A1B15-ABCA-4A29-87A6-7C3544AC569F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +71,22 @@ Global
 		{7AEEC322-942C-4373-9999-9676E480590B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AEEC322-942C-4373-9999-9676E480590B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AEEC322-942C-4373-9999-9676E480590B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5387C08B-76A0-40CE-A990-B6395D80FDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5387C08B-76A0-40CE-A990-B6395D80FDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5387C08B-76A0-40CE-A990-B6395D80FDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5387C08B-76A0-40CE-A990-B6395D80FDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B72153C-BCFE-4F75-A25F-C1EB707A18D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B72153C-BCFE-4F75-A25F-C1EB707A18D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B72153C-BCFE-4F75-A25F-C1EB707A18D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B72153C-BCFE-4F75-A25F-C1EB707A18D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C7D164-4031-4DAC-9727-20C478D45E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C7D164-4031-4DAC-9727-20C478D45E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C7D164-4031-4DAC-9727-20C478D45E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C7D164-4031-4DAC-9727-20C478D45E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77A1B15-ABCA-4A29-87A6-7C3544AC569F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77A1B15-ABCA-4A29-87A6-7C3544AC569F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77A1B15-ABCA-4A29-87A6-7C3544AC569F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77A1B15-ABCA-4A29-87A6-7C3544AC569F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
