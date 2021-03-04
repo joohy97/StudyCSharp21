@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AddressBookApp
 {
-    class datafilemanager
+    class DataFileManager
     {
         //주소록 파일 불러오기
         string dataFileName = "address.dat";
@@ -13,17 +13,20 @@ namespace AddressBookApp
         //D:\GitRepository\StudyCSharp21\chap99\AddressBookApp\bin\Debug\netcoreapp3.1
 
 
-        public void ReadData(List<AddressInfo> param)
+        public List<AddressInfo> ReadData()
         {
+            var listResult = new List<AddressInfo>();
             var filePath = Environment.CurrentDirectory + "\\" + dataFileName;
-            StreamReader sr = new StreamReader(new FileStream(filePath, FileMode.Open, FileAccess.Read));
+            var sr = new StreamReader(new FileStream(filePath, FileMode.Open, FileAccess.Read));
             while (sr.EndOfStream == false)
             {
                 var temp = sr.ReadLine();
                 string[] splits = temp.Split("|");
-                param.Add(new AddressInfo() { Name = splits[0], Phone = splits[1], Address = splits[2] });
+                listResult.Add(new AddressInfo() { Name = splits[0], Phone = splits[1], Address = splits[2] });
             }
             sr.Close();
+
+            return listResult;
         }
 
         public void WriteData(List<AddressInfo> param)

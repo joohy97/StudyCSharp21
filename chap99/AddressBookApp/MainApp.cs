@@ -11,10 +11,13 @@ namespace AddressBookApp
         {
             try
             {
-                AddressManager manager = new AddressManager();
-                manager.listAddress = new List<AddressInfo>();
-                datafilemanager dmanager = new datafilemanager();
-                dmanager.ReadData(manager.listAddress);
+                AddressManager manager = new AddressManager
+                {
+                    listAddress = new List<AddressInfo>()
+                };
+
+                DataFileManager fileManager = new DataFileManager();
+                manager.listAddress = fileManager.ReadData();
 
                 while (true)
                 {
@@ -49,7 +52,7 @@ namespace AddressBookApp
                             manager.PrintAll();
                             break;
                         case 6: //프로그램 종료
-                            dmanager.WriteData(manager.listAddress);
+                            fileManager.WriteData(manager.listAddress);
                             Environment.Exit(0);
                             break;
                         default: // 0 처리
