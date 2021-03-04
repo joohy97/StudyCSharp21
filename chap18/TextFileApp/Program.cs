@@ -36,17 +36,34 @@ namespace TextFileApp
                 sw.Close();
             }
 
-
             //파일 읽기
             StreamReader sr = null;
-            sr = new StreamReader(new FileStream(filePath, FileMode.Open));
-            Console.WriteLine($"File Size : {sr.BaseStream.Length} byte");
-
-            while (sr.EndOfStream == false) //파일의 마지막까지
+            try
             {
-                Console.WriteLine(sr.ReadLine());
+                sr = new StreamReader(new FileStream(filePath, FileMode.Open));
+                Console.WriteLine($"File Size : {sr.BaseStream.Length} byte");
+
+                while (sr.EndOfStream == false) //파일의 마지막까지
+                {
+                    Console.WriteLine(sr.ReadLine());
+                }
             }
-            sr.Close();
+            catch (Exception ex)
+            {
+                Console.WriteLine($"파일읽기 예외 발생({ex.Message}");
+                throw;
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+                
+            }
+
+            
+            
         }
     }
 }
