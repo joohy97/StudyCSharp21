@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,19 +36,74 @@ namespace FileCopyApp
             }
         }
 
-        private void BtnAsyncCopy_Click(object sender, EventArgs e)
+        private async void BtnAsyncCopy_Click(object sender, EventArgs e)
         {
-
+            long totalCopied = await CopyAsync(TxtSource.Text, TxtTarget.Text);
+            MessageBox.Show($"{totalCopied}로 복사했습니다", "비동기복사완료");
         }
 
         private void BtnSyncCopy_Click(object sender, EventArgs e)
         {
-
+            long totalCopied = CopySync(TxtSource.Text, TxtTarget.Text);
+            MessageBox.Show($"{totalCopied}로 복사했습니다", "동기복사완료");
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("취소");
+        }
 
+        private long CopySync(string sourcePath, string targetPath)
+        {
+            BtnAsyncCopy.Enabled = false;
+            long totalCopied = 0;
+
+            using (FileStream sourceStream = new FileStream(sourcePath, FileMode.Open))
+            {
+                using (FileStream targetStream = new FileStream(targetPath, FileMode.Create))
+                {
+                    byte[] buffer = new byte[1024]; //[1024 * 1024]; //1MB
+                    int nRead = 0;
+                    while ((nRead = sourceStream.Read(buffer, 0, buffer.Length)) != 0)
+                    {
+                        targetStream.Write(buffer, 0, nRead);
+                        totalCopied += nRead;
+
+                        PrbCopy.Value = (int)((totalCopied / sourceStream.Length) *100);
+
+                    }
+                }
+            }
+
+            BtnAsyncCopy.Enabled = true;
+            return totalCopied;
+        }
+
+
+        private async Task<long> CopyAsync(string sourcePath, string targetPath)
+        {
+            BtnSyncCopy.Enabled = false;
+            long totalCopied = 0;
+
+            using (FileStream sourceStream = new FileStream(sourcePath, FileMode.Open))
+            {
+                using (FileStream targetStream = new FileStream(targetPath, FileMode.Create))
+                {
+                    byte[] buffer = new byte[1024]; //[1024 * 1024]; //1MB
+                    int nRead = 0;
+                    while ((nRead = await sourceStream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+                    {
+                        await targetStream.WriteAsync(buffer, 0, nRead);
+                        totalCopied += nRead;
+
+                        PrbCopy.Value = (int)((totalCopied / sourceStream.Length) * 100);
+
+                    }
+                }
+            }
+
+            BtnSyncCopy.Enabled = true;
+            return totalCopied;
         }
     }
 }
