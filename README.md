@@ -38,3 +38,24 @@ PKNU C# 학습 리포지토리
 
 [소스보기](https://github.com/joohy97/StudyCSharp21/tree/main/chap99/AddressBookApp)
 
+수정, 삭제, 검색 시 IndexOf를 이용하여 특정 단어가 포함된 이름을 찾을 수 있게 했습니다
+```csharp
+foreach (var item in listAddress)
+            {
+                if (item.Name.IndexOf(name) >= 0)
+                {
+                    isFind = true;
+                    Console.Clear();
+                    Console.WriteLine($"이름에 {name}이 포함된 주소를 검색합니다.");
+                    Console.WriteLine("---------------------------------------- ♥");
+                    Console.WriteLine($"[{idx + 1}]");
+                    Console.WriteLine($"이름 : {item.Name}");
+                    Console.WriteLine($"번호 : {item.Phone}");
+                    Console.WriteLine($"주소 : {item.Address}");
+                    Console.WriteLine("---------------------------------------- ♡");
+                    break; //foreach 에서 탈출
+                }
+                idx++;
+            }
+```
+
