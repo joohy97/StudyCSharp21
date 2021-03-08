@@ -59,3 +59,27 @@ foreach (var item in listAddress)
             }
 ```
 
+#### 실행화면
+![실행화면](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/1.JPG)
+
+#### 주소입력
+![주소입력](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A3%BC%EC%86%8C%EC%9E%85%EB%A0%A5.JPG)
+![주소입력2](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A3%BC%EC%86%8C%EC%9E%85%EB%A0%A52.JPG)
+
+#### 주소검색
+![주소검색](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89.JPG)
+
+#### 주소수정
+![주소수정](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A3%BC%EC%86%8C%20%EC%88%98%EC%A0%95.JPG)
+
+#### 주소삭제
+![주소삭제](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A3%BC%EC%86%8C%EC%82%AD%EC%A0%9C.JPG)
+![주소삭제2](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A3%BC%EC%86%8C%EC%82%AD%EC%A0%9C2.JPG)
+
+#### 주소전체출력
+![전체출력](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A0%84%EC%B2%B4%EC%B6%9C%EB%A0%A5.JPG)
+
+#### 종료
+![종료](https://github.com/joohy97/StudyCSharp21/blob/main/ref_images/%EC%A2%85%EB%A3%8C.JPG)
+
+
