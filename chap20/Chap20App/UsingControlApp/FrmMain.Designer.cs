@@ -39,9 +39,20 @@ namespace UsingControlApp
             this.TrbHandle = new System.Windows.Forms.TrackBar();
             this.PrbDisplay = new System.Windows.Forms.ProgressBar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.BtnMsgBox = new System.Windows.Forms.Button();
+            this.BtnModaless = new System.Windows.Forms.Button();
+            this.BtnModal = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.TrvDummy = new System.Windows.Forms.TreeView();
+            this.LsvDummy = new System.Windows.Forms.ListView();
+            this.BtnAddRoot = new System.Windows.Forms.Button();
+            this.BtnAddChild = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrbHandle)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -128,18 +139,112 @@ namespace UsingControlApp
             // 
             this.groupBox2.Controls.Add(this.TrbHandle);
             this.groupBox2.Controls.Add(this.PrbDisplay);
-            this.groupBox2.Location = new System.Drawing.Point(14, 123);
+            this.groupBox2.Location = new System.Drawing.Point(14, 118);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 120);
+            this.groupBox2.Size = new System.Drawing.Size(410, 108);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TrackBar, ProgressBar";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.BtnModal);
+            this.groupBox3.Controls.Add(this.BtnModaless);
+            this.groupBox3.Controls.Add(this.BtnMsgBox);
+            this.groupBox3.Location = new System.Drawing.Point(12, 232);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(410, 61);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Modal, Modaless, MessageBox";
+            // 
+            // BtnMsgBox
+            // 
+            this.BtnMsgBox.Location = new System.Drawing.Point(282, 20);
+            this.BtnMsgBox.Name = "BtnMsgBox";
+            this.BtnMsgBox.Size = new System.Drawing.Size(111, 32);
+            this.BtnMsgBox.TabIndex = 2;
+            this.BtnMsgBox.Text = "MessageBox";
+            this.BtnMsgBox.UseVisualStyleBackColor = true;
+            this.BtnMsgBox.Click += new System.EventHandler(this.BtnMsgBox_Click);
+            // 
+            // BtnModaless
+            // 
+            this.BtnModaless.Location = new System.Drawing.Point(151, 20);
+            this.BtnModaless.Name = "BtnModaless";
+            this.BtnModaless.Size = new System.Drawing.Size(111, 32);
+            this.BtnModaless.TabIndex = 3;
+            this.BtnModaless.Text = "Modaless";
+            this.BtnModaless.UseVisualStyleBackColor = true;
+            this.BtnModaless.Click += new System.EventHandler(this.BtnModaless_Click);
+            // 
+            // BtnModal
+            // 
+            this.BtnModal.Location = new System.Drawing.Point(20, 20);
+            this.BtnModal.Name = "BtnModal";
+            this.BtnModal.Size = new System.Drawing.Size(111, 32);
+            this.BtnModal.TabIndex = 4;
+            this.BtnModal.Text = "Modal";
+            this.BtnModal.UseVisualStyleBackColor = true;
+            this.BtnModal.Click += new System.EventHandler(this.BtnModal_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.BtnAddChild);
+            this.groupBox4.Controls.Add(this.BtnAddRoot);
+            this.groupBox4.Controls.Add(this.LsvDummy);
+            this.groupBox4.Controls.Add(this.TrvDummy);
+            this.groupBox4.Location = new System.Drawing.Point(12, 299);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(410, 223);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "TreeView && ListView";
+            // 
+            // TrvDummy
+            // 
+            this.TrvDummy.Location = new System.Drawing.Point(6, 20);
+            this.TrvDummy.Name = "TrvDummy";
+            this.TrvDummy.Size = new System.Drawing.Size(196, 165);
+            this.TrvDummy.TabIndex = 0;
+            // 
+            // LsvDummy
+            // 
+            this.LsvDummy.HideSelection = false;
+            this.LsvDummy.Location = new System.Drawing.Point(208, 20);
+            this.LsvDummy.Name = "LsvDummy";
+            this.LsvDummy.Size = new System.Drawing.Size(196, 165);
+            this.LsvDummy.TabIndex = 1;
+            this.LsvDummy.UseCompatibleStateImageBehavior = false;
+            this.LsvDummy.View = System.Windows.Forms.View.Details;
+            // 
+            // BtnAddRoot
+            // 
+            this.BtnAddRoot.Location = new System.Drawing.Point(6, 191);
+            this.BtnAddRoot.Name = "BtnAddRoot";
+            this.BtnAddRoot.Size = new System.Drawing.Size(78, 24);
+            this.BtnAddRoot.TabIndex = 2;
+            this.BtnAddRoot.Text = "Add Root";
+            this.BtnAddRoot.UseVisualStyleBackColor = true;
+            this.BtnAddRoot.Click += new System.EventHandler(this.BtnAddRoot_Click);
+            // 
+            // BtnAddChild
+            // 
+            this.BtnAddChild.Location = new System.Drawing.Point(90, 191);
+            this.BtnAddChild.Name = "BtnAddChild";
+            this.BtnAddChild.Size = new System.Drawing.Size(78, 24);
+            this.BtnAddChild.TabIndex = 3;
+            this.BtnAddChild.Text = "Add Child";
+            this.BtnAddChild.UseVisualStyleBackColor = true;
+            this.BtnAddChild.Click += new System.EventHandler(this.BtnAddChild_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 385);
+            this.ClientSize = new System.Drawing.Size(436, 531);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -151,6 +256,8 @@ namespace UsingControlApp
             ((System.ComponentModel.ISupportInitialize)(this.TrbHandle)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -166,6 +273,15 @@ namespace UsingControlApp
         private System.Windows.Forms.TrackBar TrbHandle;
         private System.Windows.Forms.ProgressBar PrbDisplay;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button BtnModal;
+        private System.Windows.Forms.Button BtnModaless;
+        private System.Windows.Forms.Button BtnMsgBox;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button BtnAddChild;
+        private System.Windows.Forms.Button BtnAddRoot;
+        private System.Windows.Forms.ListView LsvDummy;
+        private System.Windows.Forms.TreeView TrvDummy;
     }
 }
 
